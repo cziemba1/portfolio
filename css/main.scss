@@ -1,0 +1,119 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, small, strike, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{ margin: 0; 
+padding: 0; 
+border: 0; 
+font-size: 100%; 
+font-family: 'Montserrat', sans-serif;
+vertical-align: baseline; 
+box-sizing: border-box;
+--main-text: #cc0066;
+}
+
+body{
+    background-color: rgba(204, 0, 102, .1);
+}
+
+
+a{
+    text-decoration: none;
+}
+
+#body-wrapper{
+    height: 100vh;
+    width: 100vw;
+}
+    #nav{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        box-sizing: content-box;
+        #logo{
+            position: relative;
+            margin: 3rem 0 0 3rem;
+            a{
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--main-text);
+            transition: all .5s ease-in;
+            }
+            a:hover{
+                letter-spacing: .2rem;
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 5rem 4rem 3rem;
+            position: relative;
+            translate: transform(-1rem, 30rem);
+            li{
+                list-style-type: none;
+                display: inline;
+                margin: .3rem 1rem;
+                .nav-link{
+                    color: black;
+                    font-size: 1.2rem;
+                    position: relative;
+                    transition: all 0.5s ease-in;
+                }
+                .nav-link:hover{
+                        letter-spacing: .1rem;
+                }
+            }
+        }
+    }
+
+.nav-link::after{
+    content: '';
+    position: absolute;
+    top:50%;
+    transform:translateY(50%);
+    width: 0;
+    left: 0;
+    height: .1rem;
+    background: currentColor;
+    transition: width 0.5s ease-in;
+}
+
+.nav-link:hover::after{
+    width: 100%;
+    color: var(--main-text);
+}
+
+#intro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42rem;
+    p{
+        font-size: 1.6rem;
+        font-weight: normal;
+        color: black;
+        overflow: hidden;
+        text-align: center;
+        letter-spacing: .1rem;
+        line-height: 2.3rem;
+    }
+}
+
+#intro-contact{
+    position: absolute;
+    transform: translate(68rem, 10rem);
+    a{
+        font-size: 1.2rem;
+        color: var(--main-text);
+        i{
+            margin-left: 1.1rem;
+            position: absolute;
+            top: .2rem;
+        }
+    }
+}
+
+.underline:hover{
+    background-color: black;
+    color: var(--main-text);
+}
