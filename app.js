@@ -1,8 +1,8 @@
-var tl = gsap.timeline();
+gsap.from("#nav", 2, { opacity: 0, ease: "power1.out" });
+gsap.from(".ani-intro", 1.8, { autoAlpha: 0, ease: "power1.out", delay: 1, stagger: 0.4 });
+gsap.to(".underline", 1, { textDecoration: "underline", ease: "power1.out", delay: .5, stagger: 0.2 })
+gsap.from(".intro-first", 1.9, { autoAlpha: 0, ease: "power1.out", delay: 2 })
 
-tl.from("#nav", 2, { autoAlpha: 0, ease: "power2.in" })
-    .staggerFrom(".ani-intro", 1, { autoAlpha: 0, y: 10, ease: "power2.in" }, 0.4, "-=1")
-    .staggerTo(".underline", 1, { textDecoration: "underline", ease: "power2.in", delay: .5 }, 0.2)
 
 
 
