@@ -50,7 +50,7 @@ a {
 }
 
 #nav #logo a {
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
   color: var(--hover-text);
   -webkit-transition: all .5s ease-in;
@@ -59,7 +59,7 @@ a {
 
 #nav #logo a #z {
   color: var(--main-text);
-  font-size: 2.5rem;
+  font-size: 1.7rem;
 }
 
 #nav #logo a:hover {
@@ -197,12 +197,12 @@ a {
 }
 
 #intro-projects .glitch:after {
-  color: var(--main-text);
+  color: var(--hover-text);
   z-index: -2;
 }
 
 #intro-projects .glitch:before {
-  color: var(--hover-text);
+  color: var(--main-text);
   z-index: -1;
 }
 
@@ -221,16 +221,16 @@ a {
             transform: translate(-2px, 2px);
   }
   25% {
-    -webkit-transform: translate(-2.5px, -2.5px);
-            transform: translate(-2.5px, -2.5px);
+    -webkit-transform: translate(-3px, -3px);
+            transform: translate(-3px, -3px);
   }
   50% {
     -webkit-transform: translate(2px, 2px);
             transform: translate(2px, 2px);
   }
   75% {
-    -webkit-transform: translate(2px, -2.5px);
-            transform: translate(2px, -2.5px);
+    -webkit-transform: translate(2px, -3px);
+            transform: translate(2px, -3px);
   }
   100% {
     -webkit-transform: translate(-2px, 2px);
@@ -244,16 +244,16 @@ a {
             transform: translate(-2px, 2px);
   }
   25% {
-    -webkit-transform: translate(-2.5px, -2.5px);
-            transform: translate(-2.5px, -2.5px);
+    -webkit-transform: translate(-3px, -3px);
+            transform: translate(-3px, -3px);
   }
   50% {
     -webkit-transform: translate(2px, 2px);
             transform: translate(2px, 2px);
   }
   75% {
-    -webkit-transform: translate(2px, -2.5px);
-            transform: translate(2px, -2.5px);
+    -webkit-transform: translate(2px, -3px);
+            transform: translate(2px, -3px);
   }
   100% {
     -webkit-transform: translate(-2px, 2px);
