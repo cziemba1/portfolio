@@ -207,12 +207,12 @@ a {
 }
 
 #intro-projects .glitch:hover:before {
-  -webkit-animation: glitch01 .5s ease infinite;
-          animation: glitch01 .5s ease infinite;
+  -webkit-animation: glitch01 .4s ease infinite;
+          animation: glitch01 .4s ease infinite;
 }
 
 #intro-projects .glitch:hover:after {
-  animation: glitch02 .5s ease  infinite reverse;
+  animation: glitch02 .4s ease  infinite reverse;
 }
 
 @-webkit-keyframes glitch01 {
@@ -221,16 +221,16 @@ a {
             transform: translate(-2px, 2px);
   }
   25% {
-    -webkit-transform: translate(-4px, -4px);
-            transform: translate(-4px, -4px);
+    -webkit-transform: translate(-2.5px, -2.5px);
+            transform: translate(-2.5px, -2.5px);
   }
   50% {
     -webkit-transform: translate(2px, 2px);
             transform: translate(2px, 2px);
   }
   75% {
-    -webkit-transform: translate(2px, -4px);
-            transform: translate(2px, -4px);
+    -webkit-transform: translate(2px, -2.5px);
+            transform: translate(2px, -2.5px);
   }
   100% {
     -webkit-transform: translate(-2px, 2px);
@@ -244,16 +244,16 @@ a {
             transform: translate(-2px, 2px);
   }
   25% {
-    -webkit-transform: translate(-4px, -4px);
-            transform: translate(-4px, -4px);
+    -webkit-transform: translate(-2.5px, -2.5px);
+            transform: translate(-2.5px, -2.5px);
   }
   50% {
     -webkit-transform: translate(2px, 2px);
             transform: translate(2px, 2px);
   }
   75% {
-    -webkit-transform: translate(2px, -4px);
-            transform: translate(2px, -4px);
+    -webkit-transform: translate(2px, -2.5px);
+            transform: translate(2px, -2.5px);
   }
   100% {
     -webkit-transform: translate(-2px, 2px);

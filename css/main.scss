@@ -163,10 +163,10 @@ a{
         }
         &:hover {
             &:before {
-            animation: glitch01 .5s ease infinite;
+            animation: glitch01 .4s ease infinite;
             }
             &:after {
-            animation: glitch02 .5s ease  infinite reverse;
+            animation: glitch02 .4s ease  infinite reverse;
             }
         }
     }
@@ -177,13 +177,13 @@ a{
     transform: translate(-2px, 2px);
   }
   25% {
-    transform: translate(-4px, -4px);
+    transform: translate(-2.5px, -2.5px);
   }
   50% {
     transform: translate(2px, 2px);
   }
   75% {
-    transform: translate(2px, -4px);
+    transform: translate(2px, -2.5px);
   }
   100% {
     transform: translate(-2px, 2px);
