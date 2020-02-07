@@ -15,7 +15,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
 }
 
 body {
-  background-color: #1e2a78;
+  background-color: #21243d;
 }
 
 a {
@@ -50,11 +50,16 @@ a {
 }
 
 #nav #logo a {
-  font-size: 1.2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: var(--main-text);
+  color: var(--hover-text);
   -webkit-transition: all .5s ease-in;
   transition: all .5s ease-in;
+}
+
+#nav #logo a #z {
+  color: var(--main-text);
+  font-size: 2.5rem;
 }
 
 #nav #logo a:hover {
@@ -102,8 +107,8 @@ a {
   left: 0;
   height: .1rem;
   background: currentColor;
-  -webkit-transition: width 0.5s ease-in;
-  transition: width 0.5s ease-in;
+  -webkit-transition: width 0.3s ease-in;
+  transition: width 0.3s ease-in;
 }
 
 .nav-link:hover::after {
@@ -170,6 +175,7 @@ a {
           align-items: flex-end;
   -webkit-transform: translate(30rem, 39.6rem);
           transform: translate(30rem, 39.6rem);
+  padding-right: 2px;
 }
 
 #intro-projects .glitch {
@@ -182,85 +188,122 @@ a {
 }
 
 #intro-projects .glitch:before, #intro-projects .glitch:after {
-  display: block;
   content: attr(data-glitch);
   position: absolute;
-  top: -1.19px;
-  left: 7.2px;
-  height: 100%;
-  width: 100%;
+  top: 0;
+  left: 7.5px;
+  bottom: 0;
+  right: 0;
 }
 
 #intro-projects .glitch:after {
-  color: var(--hover-text);
+  color: var(--main-text);
   z-index: -2;
 }
 
 #intro-projects .glitch:before {
-  color: var(--main-text);
+  color: var(--hover-text);
   z-index: -1;
 }
 
 #intro-projects .glitch:hover:before {
-  -webkit-animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-          animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  -webkit-animation: glitch01 .5s ease infinite;
+          animation: glitch01 .5s ease infinite;
 }
 
 #intro-projects .glitch:hover:after {
-  animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.1, 0.94) reverse both infinite;
+  animation: glitch02 .5s ease  infinite reverse;
 }
 
-@-webkit-keyframes glitch {
+@-webkit-keyframes glitch01 {
   0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
   }
-  20% {
-    -webkit-transform: translate(-5px, 5px);
-            transform: translate(-5px, 5px);
+  25% {
+    -webkit-transform: translate(-4px, -4px);
+            transform: translate(-4px, -4px);
   }
-  40% {
-    -webkit-transform: translate(-5px, -5px);
-            transform: translate(-5px, -5px);
+  50% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
   }
-  60% {
-    -webkit-transform: translate(5px, 5px);
-            transform: translate(5px, 5px);
+  75% {
+    -webkit-transform: translate(2px, -4px);
+            transform: translate(2px, -4px);
   }
-  80% {
-    -webkit-transform: translate(5px, -5px);
-            transform: translate(5px, -5px);
-  }
-  to {
-    -webkit-transform: translate(0);
-            transform: translate(0);
+  100% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
   }
 }
 
-@keyframes glitch {
+@keyframes glitch01 {
   0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
   }
-  20% {
-    -webkit-transform: translate(-5px, 5px);
-            transform: translate(-5px, 5px);
+  25% {
+    -webkit-transform: translate(-4px, -4px);
+            transform: translate(-4px, -4px);
   }
-  40% {
-    -webkit-transform: translate(-5px, -5px);
-            transform: translate(-5px, -5px);
+  50% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
   }
-  60% {
-    -webkit-transform: translate(5px, 5px);
-            transform: translate(5px, 5px);
+  75% {
+    -webkit-transform: translate(2px, -4px);
+            transform: translate(2px, -4px);
   }
-  80% {
-    -webkit-transform: translate(5px, -5px);
-            transform: translate(5px, -5px);
+  100% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
   }
-  to {
-    -webkit-transform: translate(0);
-            transform: translate(0);
+}
+
+@-webkit-keyframes glitch02 {
+  0% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  25% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  50% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  75% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+}
+
+@keyframes glitch02 {
+  0% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  25% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  50% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  75% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
   }
 }
 /*# sourceMappingURL=main.css.map */

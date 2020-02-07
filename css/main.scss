@@ -14,7 +14,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
 
 
 body{
-    background-color: #1e2a78;
+    background-color: #21243d;
 }
 
 
@@ -37,10 +37,15 @@ a{
             position: relative;
             margin: 3rem 0 0 3rem;
             a{
-            font-size: 1.2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: var(--main-text);
+            color: var(--hover-text);
             transition: all .5s ease-in;
+
+            #z{
+                color: var(--main-text);
+                font-size: 2.5rem;
+            }
             }
             a:hover{
                 letter-spacing: .2rem;
@@ -78,7 +83,7 @@ a{
     left: 0;
     height: .1rem;
     background: currentColor;
-    transition: width 0.5s ease-in;
+    transition: width 0.3s ease-in;
 }
 
 .nav-link:hover::after{
@@ -131,7 +136,8 @@ a{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    transform: translate(30rem, 39.6rem );
+    transform: translate(30rem, 39.6rem);
+    padding-right: 2px;
 
     .glitch{
         font-size: 6rem;
@@ -142,48 +148,61 @@ a{
         line-height: 1;
 
         &:before, &:after{
-            display: block;
             content: attr(data-glitch);
             position: absolute;
-            top: -1.19px;
-            left: 7.2px;
-            height: 100%;
-            width: 100%;
+            top: 0;
+            left: 7.5px;
+            bottom: 0;
+            right: 0;
         } &:after{
-            color: var(--hover-text);
+            color: var(--main-text);
             z-index: -2;
         } &:before{
-            color: var(--main-text) ;
+            color: var(--hover-text) ;
             z-index: -1;
         }
         &:hover {
             &:before {
-            animation: glitch .7s cubic-bezier(.25, .46, .45, .94) both infinite
+            animation: glitch01 .5s ease infinite;
             }
             &:after {
-            animation: glitch .7s cubic-bezier(.25, .46, .1, .94) reverse both infinite
+            animation: glitch02 .5s ease  infinite reverse;
             }
         }
     }
 }
 
-@keyframes glitch {
-    0% {
-        transform: translate(0)
-    }
-    20% {
-        transform: translate(-5px, 5px)
-    }
-    40% {
-        transform: translate(-5px, -5px)
-    }
-    60% {
-        transform: translate(5px, 5px)
-    }
-    80% {
-        transform: translate(5px, -5px)
-    }
-    to {
-        transform: translate(0)
-    }
+@keyframes glitch01 {
+  0%  {
+    transform: translate(-2px, 2px);
+  }
+  25% {
+    transform: translate(-4px, -4px);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+  75% {
+    transform: translate(2px, -4px);
+  }
+  100% {
+    transform: translate(-2px, 2px);
+  }
+}
+@keyframes glitch02 {
+  0%  {
+    transform: translate(-2px, 2px);
+  }
+  25% {
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(-2px, 2px);
+  }
 }
